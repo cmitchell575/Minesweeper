@@ -6,12 +6,12 @@ int main() {
   const int boardSize = 3; 
   const int numBombs = 2; 
   char displayBoard[boardSize][boardSize]; 
-  bool isBomb[boardSize][boardSize] = false; 
-  int adjacentBombs[boardSize][boardSize] = 0;
+  bool isBomb[boardSize][boardSize] = {false}; 
+  int adjacentBombs[boardSize][boardSize] = {0};
 
-  for (int = 0; i < boardSize; i++){
+  for (int i = 0; i < boardSize; i++){
     for (int j = 0; j < boardSize; j++) {
-      displayBoard[i][j] = "| X |" ;
+      displayBoard[i][j] = 'X' ;
     }
   }
   srand(static_cast<unsigned int>(time(0)));
@@ -77,7 +77,7 @@ for (int i = 0; i < boardSize; i++) {
   cout << "|\n";
 }
 if (gameOver) {
-  cout <<"Game Over! You hit a bomb!\n"
+  cout <<"Game Over! You hit a bomb!\n";
 }else if(gameWon){
   cout << "Congratulations! You've revealed all non-bomb spaces!\n";
 }
